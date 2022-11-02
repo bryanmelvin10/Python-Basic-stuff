@@ -1,0 +1,25 @@
+bits = ["o","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"]
+num = int(input("Enter a number"))
+bin_num = " "
+print(hex(num))
+
+while num >0:
+    bit = num%16
+    num = num // 16
+    bin_num = bits[bit] + bin_num
+for i in range(len(bin_num)):
+    if bin_num[i] in ["10"]:
+        bin_num[i] = "A"
+    if bin_num[i] in ["11"]:
+        bin_num[i] = "B"
+    if bin_num[i] in ["12"]:
+        bin_num[i] = "C"
+    if bin_num[i] in ["13"]:
+        bin_num[i] = "D"
+    if bin_num[i] in ["14"]:
+        bin_num[i] = "E"
+    if bin_num[i] in ["15"]:
+        bin_num[i] = "F"
+    
+print("Hexadecimal number: " + bin_num)
+
