@@ -1,0 +1,17 @@
+#binary to decimal python converter
+bits = ["o","1"]
+#the 2 numbers used in binary 1 and 0
+num = int(input("Enter a number"))
+bin_num = " "
+
+while num >0:
+    bit = num%2
+    # takes the remainder of the 2
+    #if remainder is 0 then bit is 0
+    num = num // 2
+    # // = takes only whats divided and ignores the remainder
+    bin_num = str(bit) + bin_num
+    #puts it to the left of the existing number
+    #makes it go to the left
+print("Binary number: " + bin_num)
+#prints binary code
